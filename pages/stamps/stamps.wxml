@@ -1,0 +1,16 @@
+<view class="container">
+    <view class="header">
+        <view class=" active">
+            <text>全部</text>
+        </view>
+        <view class="">
+            <text>进行中</text>
+        </view>
+        <view class="">
+            <text>已拼成</text>
+        </view>
+        <view class="">
+            <text>已结束</text>
+        </view>
+    </view>
+</view>

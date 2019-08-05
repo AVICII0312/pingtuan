@@ -1,0 +1,179 @@
+@charset "UTF-8";
+.card {
+  background-image: linear-gradient(to bottom, #ff6700, #ff7400, #ff8100, #ff8d00, #ff9800);
+  width: 100%;
+  height: 151px;
+}
+
+.text {
+  padding-top: 20px;
+  text-align: center;
+  flex-wrap: wrap;
+  color: white;
+  font-family: '微软雅黑 Bold', '微软雅黑 Regular', '微软雅黑';
+}
+
+.text .row1 {
+  font-size: 28px;
+}
+
+.text .row2 {
+  font-size: 24px;
+}
+
+.rule {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  font-size: 14px;
+}
+
+.rule .myStamps {
+  padding: 3px 15px;
+  background: #FEE8D7;
+  color: red;
+  border: 1px solid #FEF3EB;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+
+.rule .eventRule {
+  margin-top: 5px;
+  padding: 3px 15px;
+  background: #FED0A7;
+  color: red;
+  border: 1px solid #FEF3EB;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+
+.building {
+  margin: 0 10px;
+  margin-top: -40px;
+  width: 353px;
+}
+
+.building .buildingList {
+  background: #FFFFFF;
+  border-radius: 4px;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.building .buildingList .buildingImg {
+  width: 80px;
+  height: 80px;
+  background: gray;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.building .buildingList .stampsInfo {
+  flex-shrink: 1;
+}
+
+.building .buildingList .stampsInfo span {
+  font-size: 12px;
+}
+
+.building .buildingList .stampsInfo span span {
+  border: 1px solid red;
+  padding: 2px;
+  padding-left: 4px;
+  color: red;
+}
+
+.building .buildingList .stampsInfo .price {
+  color: #FF6600;
+  font-size: 12px;
+}
+
+.building .buildingList .stampsInfo .price .sum {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.building .buildingList .stampsInfo .price .term {
+  font-size: 12px;
+  color: #000;
+  padding-left: 5px;
+}
+
+.building .buildingList .progress {
+  flex-shrink: 0;
+  margin-left: 20px;
+  text-align: center;
+  padding-right: 10px;
+  font-size: 12px;
+}
+
+.building .buildingList .progress .title {
+  padding-bottom: 5px;
+}
+
+.building .buildingList .progress .time {
+  padding-bottom: 5px;
+}
+
+.building .buildingList .progress .time .frame {
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  padding: 2px;
+}
+
+.building .buildingList .progress .button {
+  border-radius: 20px;
+  background: #FF0000;
+  color: #fff;
+  font-weight: 700;
+  padding: 2px 12px;
+}
+
+.building .buildingList .progress .remain .count {
+  color: red;
+}
+
+.building .buildingList .progress .done {
+  padding-top: 26px;
+  padding-bottom: 8px;
+}
+
+.building .buildingList .progress .button-done {
+  border: 2px solid red;
+  border-radius: 20px;
+  color: red;
+  font-weight: 700;
+  padding: 2px 12px;
+}
+
+.building .buildingList .progress .finish {
+  border: 1px solid #ffcccc;
+  border-radius: 6px;
+  padding: 6px 16px;
+  color: rgba(255, 0, 0, 0.6);
+}
+
+.building .buildingList .progress .button-finish {
+  margin-top: 10px;
+  border: 2px solid red;
+  border-radius: 20px;
+  color: red;
+  font-weight: 700;
+  padding: 2px 12px;
+}
+
+.building .buildingList .progress .none {
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+.building .buildingList .progress .button-none {
+  border: 2px solid #999999;
+  border-radius: 20px;
+  color: #999999;
+  font-weight: 700;
+  padding: 2px 12px;
+}

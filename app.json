@@ -1,8 +1,11 @@
 {
-  "pages": [    
-    "pages/stamps/stamps",
-    "pages/help/help",
-    "pages/index/index"
+  "pages": [ 
+    "pages/cluster/cluster",
+    "pages/index/index", 
+    "pages/rule/rule",  
+    "pages/stamps/stamps"
+    
+    
     
 
   ],

@@ -1,3 +1,7 @@
 {
-  "navigationBarTitleText": "开团抢券"
+  "navigationBarTitleText": "开团抢券",
+  "usingComponents": {
+      "spellStamps": "/component/spellStamps/spellStamps"
+  }
+  
 }

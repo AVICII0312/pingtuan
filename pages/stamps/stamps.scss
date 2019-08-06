@@ -1,19 +1,22 @@
-.header{
-    width: 100%;
-    height: 40px;
-    border-bottom: 1px solid rgba(228, 228, 228, 1);
-    display: flex;
+.swiper-tab{
     background: #fff;
-    line-height: 40px;
-    font-size: 12px;
-    font-weight: 400;
-    justify-content: space-around;
-    align-items: baseline;
-    .active{
-        border-bottom: 1px solid rgba(255, 153, 0, 1);
-        font-size: 16px;
-        width: 94px;
-        flex-shrink:0;
-        align-self:flex-start;
-    }
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-bottom: 2rpx solid #ccc;
+    text-align: center;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.swiper-tab-item{
+    width: 25%;
+    color: #000;    
+}
+.active{
+    color: red;
+    border-bottom: 4rpx solid #F65959;
+}
+swiper{
+    text-align: center;
 }

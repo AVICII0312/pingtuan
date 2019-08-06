@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "我的拼券"
+  "navigationBarTitleText": "我的拼券",
+  "usingComponents": {
+    "spellStamps": "/component/spellStamps/spellStamps"
+}
 }

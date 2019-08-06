@@ -7,93 +7,10 @@
     </view>
   </view>
   <view class="rule">
-    <view class="myStamps" bindtap='toStamps'>我的拼券</view>
-    <view class="eventRule"bindtap='toHelp'>活动规则</view>
+    <navigator class="myStamps" url="../stamps/stamps">我的拼券</navigator>
+    <navigator class="eventRule" url="../rule/rule">活动规则</navigator>
   </view>
-  <view class="building">
-    <view class="buildingList">
-      <view class="buildingImg"></view>
-      <view class="stampsInfo">
-        <span>
-          <span>20人团</span>
-          这里显示优惠券的名称（最多可显示两排）
-        </span>
-        <view class="price">
-          ￥
-          <p class="sum">1000</p>
-          <p class="term">无门槛</p>
-        </view>
-      </view>
-      <view class="progress">
-        <view class="title">结束时间</view>
-        <view class="time">
-          <p class="frame">04</p>
-          :
-          <p class="frame">03</p>
-          :
-          <p class="frame">02</p>
-        </view>
-        <view class="button">邀请好友</view>
-        <view class="remain">
-          还差
-          <P class="count">18</P>
-          人
-        </view>
-      </view>
-    </view>
-    <view class="buildingList">
-      <view class="buildingImg"></view>
-      <view class="stampsInfo">
-        <span>
-          <span>20人团</span>
-          这里显示优惠券的名称（最多可显示两排）
-        </span>
-        <view class="price">
-          ￥
-          <p class="sum">1000</p>
-          <p class="term">无门槛</p>
-        </view>
-      </view>
-      <view class="progress">
-        <view class="done">已完成20%</view>
-        <view class="button-done">立即开团</view>
-      </view>
-    </view>
-    <view class="buildingList">
-      <view class="buildingImg"></view>
-      <view class="stampsInfo">
-        <span>
-          <span>20人团</span>
-          这里显示优惠券的名称（最多可显示两排）
-        </span>
-        <view class="price">
-          ￥
-          <p class="sum">1000</p>
-          <p class="term">无门槛</p>
-        </view>
-      </view>
-      <view class="progress">
-        <view class="finish">已拼成</view>
-        <view class="button-finish">去使用</view>
-      </view>
-    </view>
-    <view class="buildingList">
-      <view class="buildingImg"></view>
-      <view class="stampsInfo">
-        <span>
-          <span>20人团</span>
-          这里显示优惠券的名称（最多可显示两排）
-        </span>
-        <view class="price">
-          ￥
-          <p class="sum">1000</p>
-          <p class="term">无门槛</p>
-        </view>
-      </view>
-      <view class="progress">
-        <view class="none">已抢光</view>
-        <view class="button-none">立即开团</view>
-      </view>
-    </view>
+  <view class="spellStampstop">
+    <spellStamps></spellStamps>
   </view>
 </view>

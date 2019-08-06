@@ -3,4 +3,7 @@
   height: 100vh;
   background: #F2F2F2;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 } 
+

@@ -1,13 +1,34 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <view class="card">
+    <view class="legend">
+      <view>
+        <view class="img"></view>
+        <view class="text">发起拼券</view>
+      </view>
+      <view>
+        <view class="striping"></view>
+      </view>
+      <view>
+        <view class="img"></view>
+        <view class="text">分享好友</view>
+      </view>
+      <view>
+        <view class="striping"></view>
+      </view>
+      <view>
+        <view class="img"></view>
+        <view class="text">好友助力</view>
+      </view>
+    </view>
+    <view class="explain">点击发起拼券，成为团长，分享给好友，好友成功助力，好友得团员券，达到指定拼券人数，大家一起瓜分好券</view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="rule">
+    <view class="">活动规则</view>
+    <view class="">
+      <text class="">
+        1、这里显示的是用户规则，参与规则，请注意查看，内容比较重要！\n 2、这里显示的是用户规则，参与规则请注意！\n 3、这里显示的是用户规则，参与规则，请注意查看内容比较重要！
+      </text>
+    </view>
   </view>
 </view>

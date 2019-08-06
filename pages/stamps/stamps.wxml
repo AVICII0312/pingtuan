@@ -1,16 +1,24 @@
 <view class="container">
-    <view class="header">
-        <view class=" active">
-            <text>全部</text>
+    <view class="swiper-tab">
+        <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">
+            全部
         </view>
-        <view class="">
-            <text>进行中</text>
+        <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">
+            进行中
         </view>
-        <view class="">
-            <text>已拼成</text>
+        <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">
+            已拼成
         </view>
-        <view class="">
-            <text>已结束</text>
+        <view class="swiper-tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="clickTab">
+            已结束
         </view>
+    </view>
+    <view class='tabcontent'>
+        <view wx:if="{{currentTab==0}}" >
+            <spellStamps></spellStamps>
+        </view>
+        <view wx:if="{{currentTab==1}}">好评</view>
+        <view wx:if="{{currentTab==2}}">有图</view>
+        <view wx:if="{{currentTab==3}}">差评</view>
     </view>
 </view>

@@ -1,21 +1,41 @@
-/**index.wxss**/
-.userinfo {
+.card {
+  margin: 10px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.card .legend {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.card .legend .img {
+  width: 52px;
+  height: 52px;
+  background: #F2F2F2;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.card .legend .text {
+  font-size: 14px;
+  color: #333;
 }
 
-.usermotto {
-  margin-top: 200px;
+.card .legend .striping {
+  width: 40px;
+  padding-bottom: 10px;
+  border-top: 1px solid  #ccc;
+}
+
+.card .explain {
+  padding: 10px 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.rule {
+  margin: 10px;
+  font-size: 14px;
+  color: #666;
 }

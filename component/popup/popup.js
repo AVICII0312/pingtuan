@@ -13,7 +13,7 @@ Component({
      * 组件的初始数据
      */
     data: {
-      flag: true,
+      flag: true
     },
   
     /**
@@ -21,13 +21,14 @@ Component({
      */
     methods: {
       //隐藏弹框
-      hidePopup: function () {
+      hidePopup() {
+        console.log(this.data.flag)
         this.setData({
           flag: !this.data.flag
         })
       },
       //展示弹框
-      showPopup () {
+      showPopup() {
         this.setData({
           flag: !this.data.flag
         })

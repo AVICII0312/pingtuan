@@ -1,3 +1,81 @@
-<view class="container popup">
-    <popup  hidden="{{flag}}"></popup>
-</view>
+<scroll-view class="container" scroll-y="{{true}}" enable-back-to-top="{{true}}">
+    <view class="container bf">
+        <popup id="popup" bindtap="_error" class="popup"></popup>
+        <header></header>
+        <view class="building card">
+            <view class="buildingList">
+                <view class="buildingImg"></view>
+                <view class="stampsInfo">
+                    <span>
+                        <span>20人团</span>
+                        这里显示优惠券的名称（最多可显示两排）
+                    </span>
+                    <view class="price">
+                        ￥
+                        <p class="sum">1000</p>
+                        <p class="term">无门槛</p>
+                    </view>
+                    <view class="pmgressbar">
+                        <view class="bar"></view>
+                        <text>已抢20%</text>
+                    </view>
+                </view>
+                <view class="progress">
+                    <text class="gray">团长券</text>
+                </view>
+            </view>
+        </view>
+        <view class="content">
+            <view class="title">还差18人即可获得好券哦</view>
+            <view class="member">
+                <view class="message">
+                    <view class="img">
+                        头像
+                        <view class="medal">团长</view>
+                    </view>
+                    <view class="info">微信昵称</view>
+                </view>
+                <view class="message">
+                    <view class="img">头像</view>
+                    <view class="info">这是微信</view>
+                </view>
+                <view class="message">
+                    <view class="img">头像</view>
+                    <view class="info">待邀请</view>
+                </view>
+                <view class="message">
+                    <view class="img">头像</view>
+                    <view class="info">待邀请</view>
+                </view>
+            </view>
+            <view class="seeAll">
+                查看更多
+                <image src="https://b2.bmp.ovh/imgs/2019/08/4a04e7f4c11fdfc5.png" />
+            </view>
+            <view class="button">
+                <view class="invite">邀请好友</view>
+                <view class="evenMore">去看更多好券</view>
+            </view>
+            <view class="cuttingLine">帮团长助力立即获得以下好券哦</view>
+            <view class="ticket">
+                <view class="buildingList">
+                <view class="buildingImg"></view>
+                <view class="stampsInfo">
+                    <span>
+                        <span>20人团</span>
+                        这里显示优惠券的名称（最多可显示两排）
+                    </span>
+                    <view class="price">
+                        ￥
+                        <p class="sum">1000</p>
+                        <p class="term">无门槛</p>
+                    </view>
+                </view>
+                <view class="progress">
+                    <text class="gray">团员券</text>
+                </view>
+            </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

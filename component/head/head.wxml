@@ -1,0 +1,10 @@
+<view class="card">
+    <view class="text">
+      <view class="row1">开团邀好友</view>
+      <view class="row2">抢券更优惠</view>
+    </view>
+  </view>
+  <view class="rule">
+    <navigator class="myStamps" url="../stamps/stamps">我的拼券</navigator>
+    <navigator class="eventRule" url="../rule/rule">活动规则</navigator>
+  </view>

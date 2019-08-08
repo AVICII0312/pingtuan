@@ -3,5 +3,14 @@
 const app = getApp()
 
 Page({
-  
+    onReady: function () {
+        //获得popup组件
+        this.popup = this.selectComponent("#popup");
+        this.popup.showPopup()
+      },    
+      //取消事件
+      _error() {
+        console.log('你点击了取消');
+        this.popup.hidePopup();
+      },
 })

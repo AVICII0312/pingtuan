@@ -1,7 +1,8 @@
 {
   "navigationBarTitleText": "开团抢券",
   "usingComponents": {
-      "spellStamps": "/component/spellStamps/spellStamps"
+      "spellStamps": "/component/spellStamps/spellStamps",
+      "header":"/component/head/head"
   }
   
 }

@@ -1,5 +1,5 @@
 <view class="building">
-    <view class="buildingList">
+    <view class="buildingList" >
       <view class="buildingImg"></view>
       <view class="stampsInfo">
         <span>
@@ -21,7 +21,7 @@
           :
           <p class="frame">02</p>
         </view>
-        <view class="button">邀请好友</view>
+        <navigator class="button">邀请好友</navigator>
         <view class="remain">
           还差
           <P class="count">18</P>
@@ -44,7 +44,7 @@
       </view>
       <view class="progress">
         <view class="done">已完成20%</view>
-        <view class="button-done">立即开团</view>
+        <navigator class="button-done" url="../cluster/cluster">立即开团</navigator>
       </view>
     </view>
     <view class="buildingList">
@@ -62,7 +62,7 @@
       </view>
       <view class="progress">
         <view class="finish">已拼成</view>
-        <view class="button-finish">去使用</view>
+        <navigator class="button-finish" url="../stamps/stamps">去使用</navigator>
       </view>
     </view>
     <view class="buildingList">
@@ -80,7 +80,7 @@
       </view>
       <view class="progress">
         <view class="none">已抢光</view>
-        <view class="button-none">立即开团</view>
+        <navigator class="button-none">立即开团</navigator>
       </view>
     </view>
   </view>

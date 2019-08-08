@@ -1,9 +1,11 @@
 /**app.wxss**/
 .container {
-  height: 100vh;
+  height: 100%;
   background: #F2F2F2;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
 } 
-
+.bf{
+  background: #fff;
+}

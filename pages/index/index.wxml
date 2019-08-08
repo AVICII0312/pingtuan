@@ -1,16 +1,93 @@
 <!-- index.wxml -->
 <view class="container">
-  <view class="card">
-    <view class="text">
-      <view class="row1">开团邀好友</view>
-      <view class="row2">抢券更优惠</view>
-    </view>
-  </view>
-  <view class="rule">
-    <navigator class="myStamps" url="../stamps/stamps">我的拼券</navigator>
-    <navigator class="eventRule" url="../rule/rule">活动规则</navigator>
-  </view>
+  <header></header>
   <view class="spellStampstop">
-    <spellStamps></spellStamps>
+    <view class="building" wx:if="{{list.length}}">
+      <view class="buildingList" wx:for="{{list}}" wx:key="this">
+        <image src="{{item.image}}" class="buildingImg" />
+        <view class="stampsInfo">
+          <span>
+            <span>{{item.group_num}}人团</span>
+            {{item.name}}
+          </span>
+          <view class="price">
+            ￥
+            <p class="sum">{{item.reduce_price}}</p>
+            <p class="term" wx:if="{{item.coupon_type == 20}}">无门槛</p>
+            <p class="term" wx:if="{{item.coupon_type == 10}}">满{{item.min_price}}元可用</p>
+          </view>
+        </view>
+        <view class="progress">
+          <view class="title">结束时间</view>
+          <view class="time">
+            <p class="frame">{{time}}</p>
+            :
+            <p class="frame">03</p>
+            :
+            <p class="frame">02</p>
+          </view>
+          <navigator class="button">邀请好友</navigator>
+          <view class="remain">
+            还差
+            <P class="count">18</P>
+            人
+          </view>
+        </view>
+      </view>
+      <view class="buildingList">
+        <view class="buildingImg"></view>
+        <view class="stampsInfo">
+          <span>
+            <span>20人团</span>
+            这里显示优惠券的名称（最多可显示两排）
+          </span>
+          <view class="price">
+            ￥
+            <p class="sum">1000</p>
+            <p class="term">无门槛</p>
+          </view>
+        </view>
+        <view class="progress">
+          <view class="done">已完成20%</view>
+          <navigator class="button-done" url="../cluster/cluster">立即开团</navigator>
+        </view>
+      </view>
+      <view class="buildingList">
+        <view class="buildingImg"></view>
+        <view class="stampsInfo">
+          <span>
+            <span>20人团</span>
+            这里显示优惠券的名称（最多可显示两排）
+          </span>
+          <view class="price">
+            ￥
+            <p class="sum">1000</p>
+            <p class="term">无门槛</p>
+          </view>
+        </view>
+        <view class="progress">
+          <view class="finish">已拼成</view>
+          <navigator class="button-finish" url="../stamps/stamps">去使用</navigator>
+        </view>
+      </view>
+      <view class="buildingList">
+        <view class="buildingImg"></view>
+        <view class="stampsInfo">
+          <span>
+            <span>20人团</span>
+            这里显示优惠券的名称（最多可显示两排）
+          </span>
+          <view class="price">
+            ￥
+            <p class="sum">1000</p>
+            <p class="term">无门槛</p>
+          </view>
+        </view>
+        <view class="progress">
+          <view class="none">已抢光</view>
+          <navigator class="button-none">立即开团</navigator>
+        </view>
+      </view>
+    </view>
   </view>
 </view>

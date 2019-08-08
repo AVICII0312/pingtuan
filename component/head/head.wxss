@@ -1,0 +1,48 @@
+
+.card {
+    background-image: linear-gradient(to bottom, #ff6700, #ff7400, #ff8100, #ff8d00, #ff9800);
+    width: 100%;
+    height: 151px;
+  }
+  
+  .text {
+    padding-top: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+    color: white;
+    font-family: '微软雅黑 Bold', '微软雅黑 Regular', '微软雅黑';
+  }
+  
+  .text .row1 {
+    font-size: 28px;
+  }
+  
+  .text .row2 {
+    font-size: 24px;
+  }
+  
+  .rule {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: 14px;
+  }
+  
+  .rule .myStamps {
+    padding: 3px 15px;
+    background: #FEE8D7;
+    color: red;
+    border: 1px solid #FEF3EB;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+  }
+  
+  .rule .eventRule {
+    margin-top: 5px;
+    padding: 3px 15px;
+    background: #FED0A7;
+    color: red;
+    border: 1px solid #FEF3EB;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+  }

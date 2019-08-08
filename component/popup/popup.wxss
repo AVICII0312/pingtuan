@@ -1,17 +1,25 @@
-.wx-popup{
+.wx-popup {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
 }
-.popup-container{
+
+.popup-container {
     width: 260px;
     height: 280px;
     background: #FF6600;
     border-radius: 10px;
-    padding: 20px 10px 10px 10px ;
+    padding: 20px 10px 10px 10px;
 }
-.wx-popup-title{
+
+.wx-popup-title {
     text-align: center;
     font-family: '微软雅黑 Bold', '微软雅黑 Regular', '微软雅黑';
     font-weight: 700;
@@ -21,7 +29,8 @@
     background: #FF9966;
     padding: 40px;
 }
-.wx-popup-content{
+
+.wx-popup-content {
     font-family: '微软雅黑';
     font-weight: 400;
     font-style: normal;
@@ -29,7 +38,8 @@
     text-align: center;
     padding-top: 40px;
 }
-.ask{
+
+.ask {
     margin: 10px 30px;
     padding: 10px;
     width: 178px;
@@ -39,9 +49,10 @@
     background-image: linear-gradient(to bottom, #ff9600, #ff8300, #ff6e00, #ff5600, #ff3600);
     border-radius: 32px;
     border: 1px solid #FFCB00;
-    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.4);
 }
-.wx-popup-button{
+
+.wx-popup-button {
     position: relative;
     top: 30px;
 }

@@ -1,8 +1,9 @@
 {
   "pages": [ 
-    "pages/cluster/cluster",
+    
     "pages/index/index", 
     "pages/rule/rule",  
+    "pages/cluster/cluster",
     "pages/stamps/stamps"
     
     

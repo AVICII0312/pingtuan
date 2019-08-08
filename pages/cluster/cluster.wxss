@@ -1,3 +1,240 @@
-.popup{
-    padding-top: 100px;
+@charset "UTF-8";
+.popup {
+  z-index: 1;
+}
+
+.card {
+  margin-top: -40px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.building {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.buildingList {
+  background: #FFFFFF;
+  border-radius: 4px;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buildingList .buildingImg {
+  width: 95px;
+  height: 95px;
+  background: gray;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.buildingList .stampsInfo {
+  flex-shrink: 1;
+}
+
+.buildingList .stampsInfo span {
+  font-size: 12px;
+}
+
+.buildingList .stampsInfo span span {
+  border: 1px solid red;
+  padding: 0 2px;
+  color: red;
+}
+
+.buildingList .stampsInfo .price {
+  color: #FF6600;
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+
+.buildingList .stampsInfo .price .sum {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.buildingList .stampsInfo .price .term {
+  font-size: 12px;
+  color: #000;
+  padding-left: 5px;
+}
+
+.buildingList .progress {
+  flex-shrink: 0;
+  margin-left: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.gray {
+  font-family: '微软雅黑 Bold', '微软雅黑 Regular', '微软雅黑';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  color: #CCCCCC;
+  writing-mode: vertical-lr;
+  padding-right: 10px;
+  letter-spacing: 8px;
+}
+
+.pmgressbar {
+  height: 15px;
+  border: 1px solid red;
+  border-radius: 15px;
+  position: relative;
+  line-height: 15px;
+}
+
+.pmgressbar .bar {
+  width: 20%;
+  height: 100%;
+  background: #FFEACA;
+  border-radius: 15px;
+}
+
+.pmgressbar text {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-family: '微软雅黑';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  color: red;
+  text-align: left;
+}
+
+.content {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content .title {
+  padding-top: 10px;
+  font-family: '微软雅黑 Bold', '微软雅黑 Regular', '微软雅黑';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.content .member {
+  padding-top: 15px;
+  display: flex;
+}
+
+.content .member .message {
+  padding-right: 10px;
+  text-align: center;
+}
+
+.content .member .message .img {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background: #F2F2F2;
+  border: 1px solid #D7D7D7;
+  border-radius: 50%;
+  font-family: "微软雅黑 Bold", "微软雅黑 Regular", 微软雅黑;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  color: #cccccc;
+  position: relative;
+}
+
+.content .member .message .img .medal {
+  width: 38px;
+  height: 17px;
+  line-height: 17px;
+  font-size: 12px;
+  color: #fff;
+  background: red;
+  border-radius: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+}
+
+.content .member .message .info {
+  font-size: 12px;
+}
+
+.content .seeAll {
+  padding-top: 15px;
+  font-family: 微软雅黑;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  color: #b4b4b4;
+  text-align: center;
+}
+
+.content .seeAll image {
+  width: 14px;
+  height: 8px;
+}
+
+.content .button {
+  text-align: center;
+  font-family: "微软雅黑 Bold", "微软雅黑 Regular", 微软雅黑;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  color: #fff;
+  padding-top: 25px;
+}
+
+.content .button .invite {
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  background: red;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.4);
+}
+
+.content .button .evenMore {
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid red;
+  border-radius: 20px;
+  color: red;
+}
+
+.content .cuttingLine {
+  padding-top: 20px;
+  font-family: "Arial Normal", Arial;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  color: #333333;
+  position: relative;
+}
+
+.content .cuttingLine::before, .content .cuttingLine::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: -80px;
+  width: 70px;
+  height: 1px;
+  background: #E4E4E4;
+}
+
+.content .cuttingLine::after {
+  left: 190px;
+  background: #E4E4E4;
+}
+
+.content .ticket {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
 }

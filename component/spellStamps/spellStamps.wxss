@@ -26,6 +26,7 @@
 
 .building .buildingList .stampsInfo span {
     font-size: 12px;
+    min-height: 37px;
 }
 
 .building .buildingList .stampsInfo span span {

@@ -15,7 +15,7 @@
     </view>
     <view class='tabcontent'>
         <view wx:if="{{currentTab==0}}" >
-            <spellStamps></spellStamps>
+            <spellStamps wx:for="{{list}}" list='{{item}}' name='{{list.property.name}}'></spellStamps>
         </view>
         <view wx:if="{{currentTab==1}}">好评</view>
         <view wx:if="{{currentTab==2}}">有图</view>

@@ -2,6 +2,10 @@
 <view class="container">
   <header></header>
   <view class="spellStampstop">
+    <spellStamps wx:for="{{list}}" list='{{item}}'></spellStamps>
+  </view>
+  
+  <!-- <view class="spellStampstop">
     <view class="building" wx:if="{{list.length}}">
       <view class="buildingList" wx:for="{{list}}" wx:key="this">
         <image src="{{item.image}}" class="buildingImg" />
@@ -89,5 +93,5 @@
         </view>
       </view>
     </view>
-  </view>
+  </view> -->
 </view>

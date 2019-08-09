@@ -1,35 +1,30 @@
 <view class="building">
-    <view class="buildingList" >
-      <view class="buildingImg"></view>
-      <view class="stampsInfo">
-        <span>
-          <span>20人团</span>
-          这里显示优惠券的名称（最多可显示两排）
-        </span>
-        <view class="price">
-          ￥
-          <p class="sum">1000</p>
-          <p class="term">无门槛</p>
-        </view>
-      </view>
-      <view class="progress">
-        <view class="title">结束时间</view>
-        <view class="time">
-          <p class="frame">04</p>
-          :
-          <p class="frame">03</p>
-          :
-          <p class="frame">02</p>
-        </view>
-        <navigator class="button">邀请好友</navigator>
-        <view class="remain">
-          还差
-          <P class="count">18</P>
-          人
-        </view>
+  <view class="buildingList">
+    <image class="buildingImg" src="{{list.image || list.property.image}}"/> 
+    <view class="stampsInfo">
+      <span>
+        <span>{{list.group_num || list.property.group_num}}人团</span>
+        {{list.name || list.property.name}}
+      </span>
+      <view class="price">
+        ￥
+        <p class="sum">{{list.reduce_price || list.property.reduce_price}}</p>
+        <p class="term" wx:if="{{list.coupon_type == 20}}">无门槛</p>
+        <p class="term" wx:if="{{list.coupon_type == 10}}">满{{list.min_price}}元可用</p>
       </view>
     </view>
-    <view class="buildingList">
+    <view class="progress">
+      <view class="title">结束时间</view>
+      <view class="time">{{time}}</view>
+      <navigator class="button">邀请好友</navigator>
+      <view class="remain">
+        还差
+        <P class="count">{{list.group_num-list.teamInfo.member_num}}</P>
+        人
+      </view>
+    </view>
+  </view>
+  <!-- <view class="buildingList">
       <view class="buildingImg"></view>
       <view class="stampsInfo">
         <span>
@@ -82,5 +77,5 @@
         <view class="none">已抢光</view>
         <navigator class="button-none">立即开团</navigator>
       </view>
-    </view>
-  </view>
+    </view> -->
+</view>

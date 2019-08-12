@@ -3,10 +3,10 @@
         <view class="wx-popup-title">开团成功</view>
         <view class="wx-popup-content">
             <text>邀请好友助力 \n 即可获得好券哦</text>
-            <view class="ask">邀请好友助力</view>
+            <button class="ask" open-type="share">邀请好友助力</button>
         </view>
     </view>
-    <view class="wx-popup-button" bindtap="_error">
+    <view class="wx-popup-button" bindtap="hidePopup">
         <image src="https://b2.bmp.ovh/imgs/2019/08/ba75f94d74473d00.png" style="width:32px;height:32px;" />
     </view>
 </view>

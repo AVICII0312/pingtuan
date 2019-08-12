@@ -2,6 +2,7 @@
   "navigationBarTitleText": "开团抢券",
   "usingComponents": {
     "popup": "/component/popup/popup",
-    "header":"/component/head/head"
+    "header":"/component/head/head",
+    "cluster":"/component/cluster/cluster"
   }
 }

@@ -6,11 +6,12 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    list: Object,
+    listA: Object,
     time:{
       type:String,
       value:'00:00:00'
-    }
+    },
+    status:String
     
   },
 
@@ -52,9 +53,10 @@ Component({
     }
   },
   observers: {
-    'list': function () {
-      this.countdown(this.data.list.teamInfo.end_time || this.data.list.expire_time)
-    }
+    'listA': function () {
+      this.countdown(this.data.listA.teamInfo.end_time || this.data.listA.expire_time)
+    },
+  
   },
 
 })

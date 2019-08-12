@@ -1,8 +1,4 @@
 @charset "UTF-8";
-.popup {
-  z-index: 1;
-}
-
 .card {
   margin-top: -40px;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
@@ -112,73 +108,6 @@
   align-items: center;
   flex-direction: column;
 }
-
-.content .title {
-  padding-top: 10px;
-  font-family: '微软雅黑 Bold', '微软雅黑 Regular', '微软雅黑';
-  font-weight: 700;
-  font-style: normal;
-  font-size: 16px;
-}
-
-.content .member {
-  padding-top: 15px;
-  display: flex;
-}
-
-.content .member .message {
-  padding-right: 10px;
-  text-align: center;
-}
-
-.content .member .message .img {
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  background: #F2F2F2;
-  border: 1px solid #D7D7D7;
-  border-radius: 50%;
-  font-family: "微软雅黑 Bold", "微软雅黑 Regular", 微软雅黑;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 16px;
-  color: #cccccc;
-  position: relative;
-}
-
-.content .member .message .img .medal {
-  width: 38px;
-  height: 17px;
-  line-height: 17px;
-  font-size: 12px;
-  color: #fff;
-  background: red;
-  border-radius: 12px;
-  position: absolute;
-  bottom: 0;
-  left: 5px;
-}
-
-.content .member .message .info {
-  font-size: 12px;
-}
-
-.content .seeAll {
-  padding-top: 15px;
-  font-family: 微软雅黑;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 12px;
-  color: #b4b4b4;
-  text-align: center;
-}
-
-.content .seeAll image {
-  width: 14px;
-  height: 8px;
-}
-
 .content .button {
   text-align: center;
   font-family: "微软雅黑 Bold", "微软雅黑 Regular", 微软雅黑;
@@ -193,6 +122,7 @@
   width: 300px;
   height: 40px;
   line-height: 40px;
+  color: #fff;
   background: red;
   border-radius: 20px;
   margin-bottom: 15px;
@@ -218,7 +148,8 @@
   position: relative;
 }
 
-.content .cuttingLine::before, .content .cuttingLine::after {
+.content .cuttingLine::before,
+.content .cuttingLine::after {
   content: '';
   position: absolute;
   top: 30px;

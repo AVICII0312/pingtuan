@@ -1,11 +1,23 @@
 /**app.wxss**/
+
 .container {
   height: 100%;
-  background: #F2F2F2;
+  background: #f2f2f2;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-} 
-.bf{
+}
+
+.bf {
   background: #fff;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  outline: none;
+}
+button::after{
+border:none;
 }

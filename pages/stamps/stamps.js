@@ -28,7 +28,7 @@ Page({
         console.log(111)
         console.log(res)
         _this.setData({
-          list: res.data.data.data,
+          list: res.data.data,
         })
       }
     })

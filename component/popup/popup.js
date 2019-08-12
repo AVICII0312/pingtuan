@@ -40,6 +40,6 @@ Component({
       _error () {
         //触发取消回调
         this.triggerEvent("error")
-      }
+      },
     }
   })

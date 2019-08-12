@@ -1,9 +1,11 @@
 {
   "pages": [ 
+    "pages/index/index",
     
-    "pages/index/index", 
-    "pages/rule/rule",  
     "pages/cluster/cluster",
+    
+    "pages/rule/rule",  
+    
     "pages/stamps/stamps"
     
     

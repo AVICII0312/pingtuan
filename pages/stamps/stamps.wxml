@@ -14,11 +14,17 @@
         </view>
     </view>
     <view class='tabcontent'>
-        <view wx:if="{{currentTab==0}}" >
-            <spellStamps wx:for="{{list}}" list='{{item}}' name='{{list.property.name}}'></spellStamps>
+        <view wx:if="{{currentTab==0}}">
+            <spellStamps wx:for="{{list}}" listA='{{item}}'></spellStamps>
         </view>
-        <view wx:if="{{currentTab==1}}">好评</view>
-        <view wx:if="{{currentTab==2}}">有图</view>
-        <view wx:if="{{currentTab==3}}">差评</view>
+        <view wx:if="{{currentTab==1}}">
+            <spellStamps wx:if="{{item.teamInfo.status===10}}" wx:for="{{list}}" listA='{{item}}'></spellStamps>
+        </view>
+        <view wx:if="{{currentTab==2}}">
+            <spellStamps wx:if="{{item.teamInfo.status===20}}" wx:for="{{list}}" listA='{{item}}'></spellStamps>
+        </view>
+        <view wx:if="{{currentTab==3}}">
+            <spellStamps wx:if="{{item.teamInfo.status===30}}" wx:for="{{list}}" listA='{{item}}'></spellStamps>
+        </view>
     </view>
 </view>

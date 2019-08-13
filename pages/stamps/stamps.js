@@ -17,7 +17,7 @@ Page({
   getStamps: function () { //首页请求
     let _this = this
     wx.request({
-      url: 'https://lwysheng.yctmt.com/index.php?s=/api/group.coupon/myTeamLists&wxapp_id=10001&token=b5f2c3d8e226d0bb7e4144df92a80472',
+      url: 'https://lwysheng.yctmt.com/index.php?s=/api/group.coupon/myTeamLists&wxapp_id=10001&token=0fb6914dc380a1bb2bc624d4e975b4f3',
       data: {
 
       },

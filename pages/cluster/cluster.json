@@ -3,6 +3,7 @@
   "usingComponents": {
     "popup": "/component/popup/popup",
     "header":"/component/head/head",
-    "cluster":"/component/cluster/cluster"
+    "cluster":"/component/cluster/cluster",
+    "spellStamps":"/component/spellStamps/spellStamps"
   }
 }

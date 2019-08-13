@@ -4,5 +4,14 @@ Component({
     },
     properties:{
       list:Object,
+      member:Array,
+    },
+    methods:{
+      moreClick:function(e){
+        this.setData({
+          _num:e.target.dataset.num
+        })
+      }
     }
+    
   })

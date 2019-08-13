@@ -4,11 +4,20 @@
     font-weight: 700;
     font-style: normal;
     font-size: 16px;
+    text-align: center;
 }
 
 .member {
+    width: 280px;
+    height: 70px;
+    overflow: hidden;
     padding-top: 15px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.more{
+    height: 100%;
 }
 
 .member .message {
@@ -47,9 +56,14 @@
 
 .member .message .info {
     font-size: 12px;
+    width: 5em;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
 }
 
 .seeAll {
+    display: inline-block;
     padding-top: 15px;
     font-family: 微软雅黑;
     font-weight: 400;

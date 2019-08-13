@@ -1,24 +1,20 @@
 <view class="title">还差{{list.group_num-list.member_num}}人即可获得好券哦</view>
-<view class="member">
+<view class="member {{_num==1?'more':''}}">
     <view class="message">
         <image class="img" src="{{list.avatarUrl}}">头像</image>
         <view class="medal">团长</view>
         <view class="info">{{list.nickName}}</view>
     </view>
     <view class="message" wx:for="{{member}}">
-        <image class="img" src="{{member.avatarUrl}}"></image>
-        <view class="info">{{member.nickName}}</view>
+        <image class="img" src="{{item.avatarUrl}}"></image>
+        <view class="info">{{item.nickName}}</view>
     </view>
-    <view class="message">
-        <view class="img">头像</view>
-        <view class="info">待邀请</view>
-    </view>
-    <view class="message">
+    <view class="message" wx:for="{{list.group_num-list.member_num}}">
         <view class="img">头像</view>
         <view class="info">待邀请</view>
     </view>
 </view>
-<view class="seeAll">
-    查看更多
-    <image src="https://b2.bmp.ovh/imgs/2019/08/4a04e7f4c11fdfc5.png" />
+<view class="seeAll "  bindtap="moreClick" hidden="{{_num==1}}" >
+   <view  data-num="1">查看更多 <image data-num="1" src="https://b2.bmp.ovh/imgs/2019/08/4a04e7f4c11fdfc5.png" /></view> 
+   
 </view>

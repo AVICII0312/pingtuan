@@ -1,23 +1,28 @@
 <scroll-view class="container" scroll-y="{{true}}" enable-back-to-top="{{true}}">
     <view class="container bf">
-        
         <header></header>
-        <view class="building card">
+        <view class="card">
+            <view class="countdown">
+                
+            </view>
             <view class="buildingList">
-                <view class="buildingImg"></view>
+                <image class="buildingImg" src="{{teamCoupon.image}}"></image>
                 <view class="stampsInfo">
                     <span>
-                        <span>20人团</span>
-                        这里显示优惠券的名称（最多可显示两排）
+                        <span>{{teamCoupon.group_num}}人团</span>
+                        {{teamCoupon.name}}
                     </span>
                     <view class="price">
                         ￥
-                        <p class="sum">1000</p>
-                        <p class="term">无门槛</p>
+                        <p class="sum">{{teamCoupon.reduce_price}}</p>
+                        <p class="term" wx:if="{{teamCoupon.min_price==0}}">无门槛</p>
+                        <p class="term" wx:if="{{teamCoupon.min_price>0}}">
+                            满{{teamCoupon.min_price}}元可用
+                        </p>
                     </view>
                     <view class="pmgressbar">
-                        <view class="bar"></view>
-                        <text>已抢20%</text>
+                        <view class="bar" style="width:{{teamCoupon.receive_num/teamCoupon.total_num*100|int}}%"></view>
+                        <text>已抢{{teamCoupon.receive_num/teamCoupon.total_num*100|int}}%</text>
                     </view>
                 </view>
                 <view class="progress">
@@ -26,31 +31,35 @@
             </view>
         </view>
         <view class="content">
-            <cluster list='{{Colonel}}' member='{{menber}}'></cluster>
-            
+            <view class="memberlist">
+                <cluster list='{{Colonel}}' member='{{list}}'></cluster>
+            </view>
             <view class="button">
                 <button class="invite" open-type="share">邀请好友</button>
-                <view class="evenMore">去看更多好券</view>
+                <navigator class="evenMore" url="../index/index">去看更多好券</navigator>
             </view>
             <view class="cuttingLine">帮团长助力立即获得以下好券哦</view>
-            <view class="ticket">
-                <view class="buildingList">
-                <view class="buildingImg"></view>
+        </view>
+        <view class="card ticket">
+            <view class="buildingList">
+                <image class="buildingImg" src="{{memberCoupon.image}}"></image>
                 <view class="stampsInfo">
                     <span>
-                        <span>20人团</span>
-                        这里显示优惠券的名称（最多可显示两排）
+                        <span>{{memberCoupon.group_num}}人团</span>
+                        {{memberCoupon.name}}
                     </span>
                     <view class="price">
                         ￥
-                        <p class="sum">1000</p>
-                        <p class="term">无门槛</p>
+                        <p class="sum">{{memberCoupon.reduce_price}}</p>
+                        <p class="term" wx:if="{{memberCoupon.min_price==0}}">无门槛</p>
+                        <p class="term" wx:if="{{memberCoupon.min_price>0}}">
+                            满{{memberCoupon.min_price}}元可用
+                        </p>
                     </view>
                 </view>
                 <view class="progress">
                     <text class="gray">团员券</text>
                 </view>
-            </view>
             </view>
         </view>
     </view>

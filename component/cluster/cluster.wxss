@@ -9,7 +9,7 @@
 
 .member {
     width: 280px;
-    height: 70px;
+    height: 72px;
     overflow: hidden;
     padding-top: 15px;
     display: flex;

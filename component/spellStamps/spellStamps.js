@@ -7,12 +7,12 @@ Component({
    */
   properties: {
     listA: Object,
-    time:{
-      type:String,
-      value:'00:00:00'
+    time: {
+      type: String,
+      value: '00:00:00'
     },
-    status:String
-    
+    status: String
+
   },
 
   /**
@@ -27,12 +27,15 @@ Component({
    */
   methods: {
     countdown: function (newtime) {
-      setTimeout(() => {
+      clearTimeout(mytime)
+      var mytime = setTimeout(() => {
         newtime -= 1000
         this.setData({
           time: this.date_format(newtime)
         })
+        clearTimeout(mytime)
         this.countdown(newtime)
+        console.log('aa')
       }, 1000);
     },
     date_format: function (micro_second) {
@@ -45,7 +48,7 @@ Component({
       // 分钟位
       var min = this.fill_zero_prefix(Math.floor((second - hr * 3600) / 60));
       // 秒位
-      var sec = this.fill_zero_prefix((second - hr * 3600 - min * 60));     
+      var sec = this.fill_zero_prefix((second - hr * 3600 - min * 60));
       return hr + ":" + min + ":" + sec + " "
     },
     fill_zero_prefix: function (num) {
@@ -56,7 +59,7 @@ Component({
     'listA': function () {
       this.countdown(this.data.listA.teamInfo.end_time || this.data.listA.expire_time)
     },
-  
+
   },
 
 })

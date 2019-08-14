@@ -2,8 +2,9 @@
     <view class="container bf">
         <header></header>
         <view class="card">
-            <view class="countdown">
-                
+            <view class="countdown" wx:if="{{Colonel.status===10}}">
+                <view class="title">成功倒计时</view>
+                <view class="time">{{time}}</view>
             </view>
             <view class="buildingList">
                 <image class="buildingImg" src="{{teamCoupon.image}}"></image>
@@ -20,13 +21,15 @@
                             满{{teamCoupon.min_price}}元可用
                         </p>
                     </view>
-                    <view class="pmgressbar">
+                    <view class="pmgressbar" wx:if="{{Colonel.status===10}}">
                         <view class="bar" style="width:{{teamCoupon.receive_num/teamCoupon.total_num*100|int}}%"></view>
                         <text>已抢{{teamCoupon.receive_num/teamCoupon.total_num*100|int}}%</text>
                     </view>
+                    <view wx:if="{{Colonel.status===20||30}}" >有效期至：2019.04.30</view>
                 </view>
                 <view class="progress">
-                    <text class="gray">团长券</text>
+                    <text class="gray" wx:if="{{Colonel.status===10}}">团长券</text>
+                    <text class="gray employ" wx:if="{{Colonel.status===20||30}}">去使用</text>
                 </view>
             </view>
         </view>
@@ -34,11 +37,18 @@
             <view class="memberlist">
                 <cluster list='{{Colonel}}' member='{{list}}'></cluster>
             </view>
-            <view class="button">
-                <button class="invite" open-type="share">邀请好友</button>
-                <navigator class="evenMore" url="../index/index">去看更多好券</navigator>
+            <view class="button" wx:if="{{scene!==1007}}">
+                <button class="invite" open-type="share" wx:if="{{Colonel.status===10}}">邀请好友</button>
+                <navigator class="evenMore {{Colonel.status===10?'':'evenMore succeed'}}" url="../index/index">去看更多好券</navigator>
             </view>
-            <view class="cuttingLine">帮团长助力立即获得以下好券哦</view>
+            <view class="button" wx:if="{{scene===1007}}">
+                <button class="invite succeed" wx:if="{{!powerStatus}}" bindtap="getPower">为他助力</button>
+                <navigator class="evenMore succeed" url="../index/index" wx:if="{{powerStatus}}">我也要抢券</navigator>
+            </view>
+            <view class="cuttingLine">
+                <text wx:if="{{!powerStatus}}">帮团长助力立即获得以下好券哦</text>
+                <text wx:if="{{powerStatus}}">你的奖励可在我的优惠券中查看</text>
+            </view>
         </view>
         <view class="card ticket">
             <view class="buildingList">
@@ -58,7 +68,8 @@
                     </view>
                 </view>
                 <view class="progress">
-                    <text class="gray">团员券</text>
+                    <text class="gray" wx:if="{{!powerStatus}}">团员券</text>
+                    <text class="gray employ" wx:if="{{powerStatus}}">去使用</text>
                 </view>
             </view>
         </view>

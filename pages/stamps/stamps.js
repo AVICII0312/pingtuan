@@ -14,6 +14,11 @@ Page({
   onShow: function () {
     this.getStamps()
   },
+  onUnload:function () {
+    //页面隐藏
+    clearTimeout(this.mytime)
+    console.log(123)
+},
   getStamps: function () { //首页请求
     let _this = this
     wx.request({

@@ -1,4 +1,6 @@
-<view class="title">还差{{list.group_num-list.member_num}}人即可获得好券哦</view>
+<view class="title" wx:if="{{Colonel.status===10}}" hidden="{{powerStatus}}">还差{{list.group_num-list.member_num}}人即可获得好券哦</view>
+<view class="title" wx:if="{{Colonel.status===20||30&&scene!==1007}}">拼券成功，恭喜获得好券</view>
+<view class="title" wx:if="{{scene===1007&&powerStatus}}">您已帮团长助力并获得助力好券</view>
 <view class="member {{_num==1?'more':''}}">
     <view class="message">
         <image class="img" src="{{list.avatarUrl}}">头像</image>

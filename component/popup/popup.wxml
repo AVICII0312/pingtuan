@@ -1,9 +1,12 @@
 <view class="wx-popup" hidden="{{flag}}">
     <view class="popup-container">
-        <view class="wx-popup-title">开团成功</view>
+        <view class="wx-popup-title"wx:if="{{scene!==1007}}">开团成功</view>
+        <view class="wx-popup-title"wx:if="{{scene===1007}}">助力成功</view>
         <view class="wx-popup-content">
-            <text>邀请好友助力 \n 即可获得好券哦</text>
-            <button class="ask" open-type="share">邀请好友助力</button>
+            <text wx:if="{{scene!==1007}}">邀请好友助力 \n 即可获得好券哦</text>
+            <text wx:if="{{scene===1007}}">拼券成功即可获得助力好券</text>
+            <button class="ask" open-type="share" wx:if="{{scene!==1007}}">邀请好友助力</button>
+            <navigator class="ask" url="../index/index" wx:if="{{scene===1007}}">我也要抢好券</navigator>
         </view>
     </view>
     <view class="wx-popup-button" bindtap="hidePopup">

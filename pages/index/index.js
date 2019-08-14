@@ -25,6 +25,7 @@ Page({
                 'content-type': 'application/json'
             },
             success(res) {
+                console.log(1111)
                 console.log(res)
                 _this.setData({
                     list: res.data.data.data,
@@ -53,6 +54,7 @@ Page({
             header:{"Content-Type": "application/x-www-form-urlencoded"},
             method:'POST',
             success(openres){
+                console.log(213)
                 console.log(openres)
             }
         })

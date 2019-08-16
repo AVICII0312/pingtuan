@@ -2,7 +2,7 @@
 <view class="container">
   <header></header>
   <view class="spellStampstop">
-    <spellStamps wx:for="{{list}}" listA='{{item}}'></spellStamps>
+    <spellStamps id="stamps" wx:for="{{list}}" listA='{{item}}'></spellStamps>
     <view class="building">
       <view class="buildingList">
         <view class="buildingImg"></view>

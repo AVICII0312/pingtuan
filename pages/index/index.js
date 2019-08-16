@@ -10,10 +10,6 @@ Page({
     onShow: function () {
         this.getStamps()
     },
-    onLoad: function () {},
-    onReady: function () {
-
-    },
     getStamps: function () { //首页请求
         let _this = this
         wx.request({
@@ -40,20 +36,21 @@ Page({
         }
         return {
             title: '自定义转发标题',
-            path: '/page/index/index'
         }
     },
-    onOpenCluster:function(){
+    onOpenCluster: function () {
         wx.request({
-            url:`https://lwysheng.yctmt.com/index.php?s=api/group.coupon/createTeam`,
-            data:{
-                wxapp_id:'10001',
-                token:'0fb6914dc380a1bb2bc624d4e975b4f3',
-                coupon_team_id:'10016'
+            url: `https://lwysheng.yctmt.com/index.php?s=api/group.coupon/createTeam`,
+            data: {
+                wxapp_id: '10001',
+                token: '0fb6914dc380a1bb2bc624d4e975b4f3',
+                coupon_team_id: '10016'
             },
-            header:{"Content-Type": "application/x-www-form-urlencoded"},
-            method:'POST',
-            success(openres){
+            header: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            method: 'POST',
+            success(openres) {
                 console.log(213)
                 console.log(openres)
             }

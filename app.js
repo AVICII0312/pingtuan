@@ -1,6 +1,13 @@
 //app.js
 App({
-  onLaunch: function () {
+  data:{
+    scene:Number
+  },
+  onShow:function(options){
+    this.data.scene = options.scene //获取入口场景值
+    console.log('小程序启动入口',this.data.scene)
+  },
+  onLaunch: function (options) {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -34,6 +41,6 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
   }
 })

@@ -9,17 +9,7 @@ Page({
         memberCoupon: {},
         teamCoupon: {},
         time: '00:00:00',
-        scene:'' ,//小程序进入场景值
-        powerStatus:false
-    },
-    onLoad: function (res) {
-        //获取用户进入路径
-        let obj = wx.getLaunchOptionsSync()
-        let _this = this
-        _this.setData({
-            scene:obj.scene
-        })
-        console.log('启动小程序的场景值:', this.data.scene)
+        powerStatus: false,
     },
     onReady: function () {
         //获得popup组件
@@ -37,7 +27,6 @@ Page({
         }
         return {
             title: '自定义转发标题',
-            path: '/page/index/index'
         }
     },
     getCluster: function () {
@@ -67,18 +56,20 @@ Page({
             }
         })
     },
-    getPower:function(){
-        let _this = this 
+    getPower: function () {
+        let _this = this
         wx.request({
-            url:`https://lwysheng.yctmt.com/index.php?s=api/group.coupon/joinTeam`,
-            data:{
-                wxapp_id:'10001',
-                token:'0fb6914dc380a1bb2bc624d4e975b4f3',
-                coupon_team_id:'10016'
+            url: `https://lwysheng.yctmt.com/index.php?s=api/group.coupon/joinTeam`,
+            data: {
+                wxapp_id: '10001',
+                token: '0fb6914dc380a1bb2bc624d4e975b4f3',
+                coupon_team_id: '10016'
             },
-            header:{"Content-Type": "application/x-www-form-urlencoded"},
-            method:'POST',
-            success(openres){
+            header: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            method: 'POST',
+            success(openres) {
                 _this.popup.showPopup()
                 console.log(openres)
             }

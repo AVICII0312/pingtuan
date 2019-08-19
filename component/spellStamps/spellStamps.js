@@ -50,10 +50,10 @@ Component({
         this.setData({
           timeOver:true
         })
-        return
+       /*  return */
       }
       let mytime = setTimeout(() => {
-        let lefttime = newtime*1000 - new Date().getTime()
+        let lefttime = new Date().getTime()-newtime*1000 
         lefttime -= 1000
         this.setData({
           time: this.date_format(lefttime),

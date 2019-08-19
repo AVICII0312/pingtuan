@@ -10,14 +10,20 @@ Page({
         teamCoupon: {},
         time: '00:00:00',
         powerStatus: false,
+        scene:Number
+    },
+    onLoad:function(){
+        this.setData({
+            scene:getApp().data.scene
+          })
+        console.log(11111,this.data.scene)
     },
     onReady: function () {
         //获得popup组件
         this.popup = this.selectComponent("#popup");
-        this.popup.showPopup()
+        if(this.data.scene!==1007){this.popup.showPopup()}
         this.getCluster()
         this.getClusterCoupon()
-
     },
 
     onShareAppMessage: function (res) {
@@ -26,7 +32,7 @@ Page({
             console.log(res.target)
         }
         return {
-            title: '自定义转发标题',
+            title: '送你一张团团房产助手优惠券，点我助力即可得到',
         }
     },
     getCluster: function () {
@@ -71,7 +77,9 @@ Page({
             method: 'POST',
             success(openres) {
                 _this.popup.showPopup()
-                console.log(openres)
+                _this.setData({
+                    powerStatus:true
+                })
             }
         })
     },
